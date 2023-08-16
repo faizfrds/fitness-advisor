@@ -13,7 +13,7 @@ export const GET = async (req: NextRequest) => {
 
     const posts = await prisma.exercise.findMany({
         where: {
-            categoryId: desiredId,
+            categoryId: desiredId!,
         }
     });
     return new NextResponse(JSON.stringify(posts), { status: 200 });
