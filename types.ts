@@ -9,7 +9,7 @@ export type ExerciseType = {
 
     title: string;
     description: string;
-    categoryId: number;
+    categoryId: Int16Array;
 };
 
 
