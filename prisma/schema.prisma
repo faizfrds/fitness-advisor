@@ -14,7 +14,7 @@ model Category {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   name      String
-  title     String   @unique
+  title     String
   exercises     Exercise[]
 }
 
@@ -24,6 +24,6 @@ model Exercise {
   title     String   @db.VarChar(255)
   image     String?
   description String
-  category    Category?    @relation(fields: [categoryId], references: [title])
-  categoryId  String
+  category    Category?    @relation(fields: [categoryId], references: [id])
+  categoryId  Int
 }
