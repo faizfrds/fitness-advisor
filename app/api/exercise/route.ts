@@ -8,7 +8,7 @@ export const GET = async (req: NextRequest) => {
 
     const url = new URL(req.url)
     console.log(url);
-    const desiredId = parseInt(url.searchParams.get("categoryId") || '10');
+    const desiredId = parseInt(url.searchParams.get("categoryId") || '{}');
     console.log(desiredId);
 
     const posts = await prisma.exercise.findMany({
