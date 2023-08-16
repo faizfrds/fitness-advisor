@@ -2,7 +2,7 @@ import { CategoryType } from "@/types";
 import Cards from "./Cards";
 
 async function getCategory() {
-  const res = await fetch(`${process.env.BASE_URL}/api/category`, {
+  const res = await fetch(`${process.env.VERCEL_URL}/api/category`, {
     cache: "no-store",
   });
 
