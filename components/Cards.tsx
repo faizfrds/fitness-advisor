@@ -1,6 +1,5 @@
 "use client";
 
-import { create } from "zustand";
 import useIdModal from "@/store/idStore";
 
 import { CategoryType } from "@/types";
@@ -8,10 +7,6 @@ import Link from "next/link";
 
 interface CardsProps {
   category: CategoryType;
-}
-
-function onClick() {
-  const id = useIdModal.bind;
 }
 
 const Cards: React.FC<CardsProps> = ({ category }) => {

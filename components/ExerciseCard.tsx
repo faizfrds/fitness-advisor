@@ -4,7 +4,6 @@ import { create} from "zustand";
 import useIdModal from "@/store/idStore";
 
 import { CategoryType, ExerciseType } from "@/types";
-import Link from "next/link";
 
 interface ExerciseCardProps {
   exercise: ExerciseType;
