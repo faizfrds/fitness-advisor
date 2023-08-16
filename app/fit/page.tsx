@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 
 async function getExercises() {
-  const res = await fetch(`${process.env.BASE_URL}/api/exercise?categoryId=10`, {
+  const res = await fetch(`${process.env.VERCEL_URL}/api/exercise?categoryId=10`, {
     cache: "no-store",
   });
 
