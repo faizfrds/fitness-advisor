@@ -1,6 +1,6 @@
 
 
-import ListExercises from "@/components/ListExercises";
+import ListExercises from "@/app/components/ListExercises";
 import { ExerciseType } from "@/types";
 import { HiArrowLeft } from "react-icons/hi";
 import React from "react";
