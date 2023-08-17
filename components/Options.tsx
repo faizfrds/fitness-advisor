@@ -13,6 +13,8 @@ async function getCategory() {
   return res.json();
 }
 
+
+
 const Options = async () => {
   const category: CategoryType[] = await getCategory();
   console.log(category);

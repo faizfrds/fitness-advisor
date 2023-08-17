@@ -1,6 +1,9 @@
 import Cards from "@/components/Cards";
 import Options from "@/components/Options";
+import { CategoryType } from "@/types";
 import Image from "next/image";
+
+
 
 export default function Home() {
   return (
@@ -9,11 +12,10 @@ export default function Home() {
         <div className="text-5xl uppercase font-bold italic">Workouts</div>
         <div className="pt-2 text-md">Find Your Best Plan</div>
         <div className="flex justify-center">
-          <Options />
+            <Options />
         </div>
       </div>
     </div>
   );
 }
 
-export const runtime = "edge";
