@@ -1,5 +1,6 @@
 import { CategoryType } from "@/types";
 import Cards from "./Cards";
+import axios from "axios";
 
 async function getCategory() {
   const res = await fetch(`${process.env.VERCEL_URL}/api/category`, {
@@ -30,3 +31,6 @@ const Options = async () => {
 };
 
 export default Options;
+
+
+export const runtime = "edge";
