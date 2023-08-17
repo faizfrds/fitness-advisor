@@ -33,4 +33,3 @@ const Options = async () => {
 export default Options;
 
 
-export const runtime = "edge";

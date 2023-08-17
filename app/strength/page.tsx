@@ -42,3 +42,6 @@ export default async function Strength() {
     </div>
   );
 }
+
+
+export const runtime = "edge";

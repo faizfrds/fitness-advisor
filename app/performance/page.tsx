@@ -43,3 +43,6 @@ export default async function Performance() {
     </div>
   );
 }
+
+
+export const runtime = "edge";
