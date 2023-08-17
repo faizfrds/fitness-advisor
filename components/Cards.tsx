@@ -12,7 +12,7 @@ interface CardsProps {
 const Cards: React.FC<CardsProps> = ({ category }) => {
   return (
     <Link href={`/${category.title}`}>
-      <div className="lg:relative group flex flex-col rounded-md items-center overflow-hidden bg-neutral-100 hover:bg-neutral-200/80 cursor-pointer transition p-5 w-[220px]">
+      <div className=" lg:relative group flex flex-col rounded-md items-center overflow-hidden bg-neutral-100 hover:bg-neutral-200/80 cursor-pointer transition p-5 lg:h-fit md:h-[100px] h-fit lg:w-[220px] md:w-[200px] w-[190px]">
         <div className="text-lg font-bold text-emerald-800 mb-2 capitalize">
           {category.name}
         </div>
