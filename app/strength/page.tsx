@@ -1,5 +1,5 @@
 
-import ListExercises from "@/app/components/ListExercises";
+import ListExercises from "@/components/ListExercises";
 import { ExerciseType } from "@/types";
 import { HiArrowLeft } from "react-icons/hi";
 import React from "react";
@@ -8,7 +8,7 @@ import Link from "next/link";
 async function getExercises() {
 
 
-  const res = await fetch(`${process.env.VERCEL_URL}/api/exercise?categoryId=8`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/exercise?categoryId=8`, {
     cache: "no-store",
   });
 
