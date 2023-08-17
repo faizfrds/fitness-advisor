@@ -1,6 +1,5 @@
-import Cards from "@/app/components/Cards";
+
 import Options from "@/app/components/Options";
-import { CategoryType } from "@/types";
 import Image from "next/image";
 
 export default function Home() {
