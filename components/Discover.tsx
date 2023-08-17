@@ -82,7 +82,7 @@ const Discover = () => {
                       setTab(3);
                     }
                   }}
-                  className="ml-7 text-white"
+                  className="ml-7 text-white cursor-pointer hover:scale-105"
                   size={20}
                 />
               </form>
