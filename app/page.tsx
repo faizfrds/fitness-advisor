@@ -1,4 +1,5 @@
 import Cards from "@/components/Cards";
+import Discover from "@/components/Discover";
 import Options from "@/components/Options";
 import Image from "next/image";
 
@@ -10,6 +11,9 @@ export default function Home() {
         <div className="pt-2 text-md">Find Your Best Plan</div>
         <div className="flex justify-center">
           <Options />
+        </div>
+        <div>
+          <Discover />
         </div>
       </div>
     </div>
