@@ -4,6 +4,9 @@ import Options from "@/components/Options";
 import Image from "next/image";
 
 export default function Home() {
+
+  console.log("re-render");
+
   return (
     <div className="justify-center flex">
       <div className="lg:mt-72 md:mt-56 mt-20 text-center flex-col w-[80%] justify-center">

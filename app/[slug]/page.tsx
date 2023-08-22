@@ -1,21 +1,33 @@
 import ListExercises from "@/components/ListExercises";
 import { ExerciseType } from "@/types";
-import { HiArrowLeft } from "react-icons/hi";
-import React from "react";
 import Link from "next/link";
+import { HiArrowLeft } from "react-icons/hi";
 
-async function getExercises() {
-  const res = await fetch(`${process.env.BASE_URL}/api/exercise?categoryId=6`, {
-    cache: "no-store",
-  });
+export default async function Page({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
 
-  if (!res.ok) {
-    console.log(res);
+  async function getExercises() {
+
+    console.log(searchParams);
+
+    const res = await fetch(
+      `${process.env.BASE_URL}/api/exercise?categoryId=${params.slug}`,
+      {
+        cache: "no-store",
+      }
+    );
+
+    if (!res.ok) {
+      console.log(res);
+    }
+    return res.json();
   }
-  return res.json();
-}
 
-export default async function Muscle() {
   const exercise: ExerciseType[] = await getExercises();
   console.log(exercise);
 
@@ -29,7 +41,7 @@ export default async function Muscle() {
           </div>
         </Link>
         <div className="capitalize text-2xl font-bold">
-          build muscle workout plans
+          build strength workout plans
         </div>
         <div className="text-black">
           <ListExercises exercises={exercise} />
@@ -38,4 +50,3 @@ export default async function Muscle() {
     </div>
   );
 }
-
