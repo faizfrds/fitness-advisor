@@ -4,16 +4,12 @@ import Link from "next/link";
 import { HiArrowLeft } from "react-icons/hi";
 
 export default async function Page({
-  params,
-  searchParams,
+  params, searchParams
 }: {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { slug: string};
+  searchParams: { [key: string]: string | string[] };
 }) {
-
   async function getExercises() {
-
-    console.log(searchParams);
 
     const res = await fetch(
       `${process.env.BASE_URL}/api/exercise?categoryId=${params.slug}`,
@@ -21,6 +17,7 @@ export default async function Page({
         cache: "no-store",
       }
     );
+
 
     if (!res.ok) {
       console.log(res);
@@ -41,7 +38,7 @@ export default async function Page({
           </div>
         </Link>
         <div className="capitalize text-2xl font-bold">
-          build strength workout plans
+          {searchParams?.name} workout plans
         </div>
         <div className="text-black">
           <ListExercises exercises={exercise} />

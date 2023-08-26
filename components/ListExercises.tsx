@@ -8,6 +8,7 @@ interface ListExercisesProps {
 
 const ListExercises:React.FC<ListExercisesProps> = async ({exercises}) => {
 
+
   if (exercises.length === 0) {
     return <div className="mt-4 text-neutral-400">Under Maintenace</div>;
   } else {

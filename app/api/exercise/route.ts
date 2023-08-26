@@ -7,9 +7,7 @@ export const GET = async (req: NextRequest) => {
   try {
 
     const url = new URL(req.url)
-    console.log(url);
     const desiredId = parseInt(url.searchParams.get("categoryId") || '{}');
-    console.log(desiredId);
 
     const posts = await prisma.exercise.findMany({
         where: {
@@ -19,8 +17,8 @@ export const GET = async (req: NextRequest) => {
     return new NextResponse(JSON.stringify(posts), { status: 200 });
   } catch (error) {
     return new NextResponse(
-      JSON.stringify({ message: "something went wrong" }),
-      { status: 500 }
+    JSON.stringify({ message: "something went wrong" }),
+    { status: 500 }
     );
   }
 };
