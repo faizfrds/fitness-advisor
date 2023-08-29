@@ -8,7 +8,7 @@ export default function Home() {
   console.log("re-render");
 
   return (
-    <div className="justify-center flex">
+    <div className="justify-center flex h-[90vh]">
       <div className="lg:mt-72 md:mt-56 mt-20 text-center flex-col w-[80%] justify-center">
         <div className="text-5xl uppercase font-bold italic">Workouts</div>
         <div className="pt-2 text-md">Find Your Best Plan</div>

@@ -1,6 +1,8 @@
 import { CategoryType } from "@/types";
 import Cards from "./Cards";
 import axios from "axios";
+import { error } from "console";
+import { useState } from "react";
 
 async function getCategory() {
   const res = await fetch(`${process.env.BASE_URL}/api/category`, {
@@ -9,9 +11,11 @@ async function getCategory() {
 
   if (!res.ok) {
     console.log(res);
+    throw error("")
   }
   return res.json();
 }
+
 
 
 const Options = async () => {
@@ -23,7 +27,9 @@ const Options = async () => {
   } else {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-10 gap-4">
+
         {category.map((item) => (
+
           <Cards category={item} />
         ))}
       </div>
